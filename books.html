@@ -1,0 +1,59 @@
+<!-- // EXERCISE: The Book List
+
+// Keep track of which books you read and which books you want to read!
+
+// Create a webpage with an h1 of "My Book List".
+// Add a script tag to the bottom of the page, where all your JS will go.
+// Copy the array of books from the previous exercise.
+// Iterate through the array of books. For each book, create a p element with the book title and author and append it to the page.
+// Bonus: Use a ul and li to display the books.
+// Bonus: add a property to each book with the URL of the book cover, and add an img element for each book on the page.
+// Bonus: Change the style of the book depending on whether you have read it or not.
+ -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Books</title>
+</head>
+
+<body>
+  <h1>My Books</h1>
+
+  <script>
+    var readBooks = [
+      { title: "Cryptonomicon",
+        author: "Neal Stephensen",
+        read: true},
+      { title: "So Good They Can't Ignore You",
+        author: "Cal Newport",
+        read: true},
+      { title: "Eloquent Ruby",
+        author: "A Rubyist",
+        read : false},
+      { title: "The Years of Lynden Johnson",
+        author: "Robert A. Caro",
+        read: false}
+    ];
+    
+    var node = document.getElementsByTagName('body')[0];
+    var ulTag = document.createElement('ul');
+
+    for (var i=0; i < readBooks.length; i++){
+      var book = readBooks[i];
+      
+      var liTag = document.createElement('li');
+      var p = document.createElement('p');
+      var ptext = document.createTextNode(book.title + ' by ' + book.author);
+      
+      
+      p.appendChild(ptext);
+      node.appendChild(p);
+    }
+  </script>
+
+</body>
+
+</html>
