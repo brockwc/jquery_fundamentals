@@ -52,15 +52,27 @@ $(document).ready(function() {
 // Uncheck all checkboxes using jQuery
 // Hint: you will have to select the input and can use .removeAttr
 
+$(document).ready(function() {
+  $('input').removeAttr('checked', 'uncheck');
+})
+
 // EXERCISE: Change Parent
 
 // Move "#child" from "#parent1" to "#parent2"
 // Hint: you can use .appendTo
 
+$(document).ready(function() {
+  $('#child').appendTo('#parent2');
+})
+
 // EXERCISE: Select A Option in A Select Box
 
 // Select the second option in the selectbox by script
 // Hint: you will have to select the option and can use .eq and .attr
+
+$(document).ready(function() {
+  $('option').eq(1).attr('selected', true);
+})
 
 // EXERCISE: Change Size
 
