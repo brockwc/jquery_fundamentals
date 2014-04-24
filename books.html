@@ -26,33 +26,50 @@
     var readBooks = [
       { title: "Cryptonomicon",
         author: "Neal Stephensen",
-        read: true},
+        read: true, 
+        img: "http://upload.wikimedia.org/wikipedia/en/thumb/9/93/Cryptonomicon(1stEd).jpg/200px-Cryptonomicon(1stEd).jpg" },
+
       { title: "So Good They Can't Ignore You",
         author: "Cal Newport",
-        read: true},
+        read: true,
+        img: "http://alexvermeer.com/wp-content/uploads/so-good-they-cant-ignore-you-cover.jpg" },
+
       { title: "Eloquent Ruby",
         author: "A Rubyist",
-        read : false},
+        read : false,
+        img: "https://p.gr-assets.com/200x200/scale/books/1298254458/10536330.jpg" },
+
       { title: "The Years of Lynden Johnson",
         author: "Robert A. Caro",
-        read: false}
+        read: false,
+        img: "http://sierramadrelibraryfriends.org/wp-content/uploads/2013/07/Lyndon-Johnson-The-Passage-of-Power-book-cover.jpeg" }
+
     ];
     
-    var node = document.getElementsByTagName('body')[0];
     var ulTag = document.createElement('ul');
 
-    for (var i=0; i < readBooks.length; i++){
-      var book = readBooks[i];
-      
+    for (var i=0; i < readBooks.length; i++){  
+
+      // Solution for using a ul and li to display the books
       var liTag = document.createElement('li');
-      var p = document.createElement('p');
-      var ptext = document.createTextNode(book.title + ' by ' + book.author);
-      
-      
-      p.appendChild(ptext);
-      node.appendChild(p);
+      liTag.innerHTML = readBooks[i].title + " by " + readBooks[i].author + "<br>";
+
+      ulTag.appendChild(liTag);
+
+      // Solution for adding image for the book
+      var imgTag = document.createElement('img');
+      imgTag.src = readBooks[i].img;
+      liTag.appendChild(imgTag);
+
+      // Solution for the first part of the exercise using p tags to display title and author.
+      // var p = document.createElement('p');
+      // var ptext = document.createTextNode(book.title + ' by ' + book.author);
+      // p.appendChild(ptext);
+      // document.body.appendChild(p);
     }
-  </script>
+
+    document.body.appendChild(ulTag);
+      </script>
 
 </body>
 
