@@ -10,6 +10,14 @@
 // Find the Google search button and store it in a variable.
 // Modify the text of the button so that it says "Yahooo!" instead.
 
+// MY SOLUTION FOR THE IMAGE
+document.getElementById("hplogo").style.backgroundImage="url('http://allenmeyerdesign.com/wp-content/uploads/2013/09/new-yahoo-logo.jpg')";
+"url('http://allenmeyerdesign.com/wp-content/uploads/2013/09/new-yahoo-logo.jpg')"
+
+// MY SOLUTION FOR THE BUTTON
+document.getElementById("gbqfsa").innerHTML="Yahoo!";
+"Yahoo!"
+
 // EXERCISE: About Me
 
 // Cuz every webpage needs an "About" section.
