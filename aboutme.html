@@ -9,16 +9,43 @@
     <h1>About Me</h1>
     
     <ul>
-      <li>Nickname: <span id="nickname"></span>
-      <li>Favorites:  <span id="favorites"></span>
-      <li>Hometown: <span id="hometown"></span>
+      <li>
+        Nickname: <span id="nickname"></span>
+      </li>
+      <li>
+        Favorites:  <span id="favorites"></span>
+      </li>
+      <li>
+        Hometown: <span id="hometown"></span>
+      </li>
     </ul>
 
   <script type="text/javascript">
+  // My solution for adding in text to the spans
+    document.getElementById("nickname").innerHTML="Bear";
+    document.getElementById("favorites").innerHTML="The Darjeeling Limited, Good Bad Coffee, Pinot Noir, Technology.";
+    document.getElementById("hometown").innerHTML="Brantford, Ontario";
+
   // My solution for changing the font-family of the document.
     document.getElementById("content").style.fontFamily="Arial, sans-serif";
 
-    
+  // My solution for iterating through the list items.
+    var listItems = document.getElementsByTagName('li');
+    for (var i=0; i < listItems.length; i++){
+      var listItem = listItems[i];
+      listItem.className="listitem";
+      listItem.style.color="red";
+    }
+
+  // My solution for adding in an image of me.
+    var pageNode = document.getElementsByTagName('body')[0];
+
+    var pic = document.createElement('img');
+
+    pic.src = 'https://bitmakerlabs.s3.amazonaws.com/hiring_board/production/uploads/student/photo/204/medium_IMG_9830.JPG?AWSAccessKeyId=AKIAIBJN6HYNJYBOKTQA&Signature=mXtlQPFMBJs0af6SW2TH7dUwVRY%3D&Expires=1398370776';
+
+    // pic.style.border = '1px solid black';
+    pageNode.appendChild(pic);
   </script>
 
   </body>
